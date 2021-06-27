@@ -31,7 +31,7 @@ class PhotoDataSource(private val api: PexelsAPI) {
                         Photo(
                             it.id,
                             it.src.original,
-                            it.src.small,
+                            it.src.portrait,
                             it.photographer,
                             it.photographerUrl
                         )
