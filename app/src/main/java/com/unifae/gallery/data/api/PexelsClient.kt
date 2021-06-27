@@ -15,12 +15,12 @@ object PexelsClient {
             val url = it.request()
                 .url()
                 .newBuilder()
-                .addQueryParameter("Authorization", PEXELS_API_KEY)
                 .build()
 
             val request = it.request()
                 .newBuilder()
                 .url(url)
+                .header("Authorization", PEXELS_API_KEY)
                 .build()
 
             return@Interceptor it.proceed(request)
