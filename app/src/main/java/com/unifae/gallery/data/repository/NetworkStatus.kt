@@ -3,7 +3,7 @@ package com.unifae.gallery.data.repository
 class NetworkStatus(val status: Status, val message: String) {
     companion object {
         val LOADING_COMPLETE: NetworkStatus = NetworkStatus(Status.SUCCESS, "Success.")
-        val LOADING: NetworkStatus = NetworkStatus(Status.ON_PROCESS, "On loading.")
+        val LOADING: NetworkStatus = NetworkStatus(Status.ON_LOADING, "On loading.")
         val ERROR: NetworkStatus = NetworkStatus(Status.FAILED, "Error.")
     }
 }
@@ -11,5 +11,5 @@ class NetworkStatus(val status: Status, val message: String) {
 enum class Status {
     SUCCESS,
     FAILED,
-    ON_PROCESS,
+    ON_LOADING,
 }
