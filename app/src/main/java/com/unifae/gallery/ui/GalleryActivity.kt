@@ -46,7 +46,9 @@ class GalleryActivity : AppCompatActivity() {
         )
 
         // button event handler
-        layout.galleryBtnSearch.setOnClickListener { onSearchButtonClicked(it) }
+        layout.galleryBtnSearch.setOnClickListener { 
+            if(layout.galleryEtSearch.text.isNotEmpty()) onSearchButtonClicked(it)
+        }
 
         // scroll event handler
         layout.galleryRvList.addOnScrollListener(object : RecyclerView.OnScrollListener() {
