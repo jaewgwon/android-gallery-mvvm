@@ -3,4 +3,5 @@
     <dimen name="margin">8dp</dimen>
     <dimen name="margin_small">4dp</dimen>
     <dimen name="margin_big">12dp</dimen>
+    <dimen name="thumbnail_size">48dp</dimen>
 </resources>

@@ -31,9 +31,11 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/gallery_rv_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="0dp"
         android:layout_marginTop="@dimen/margin_big"
+        android:padding="@dimen/margin"
         app:layout_constraintTop_toBottomOf="@id/gallery_et_search"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="@id/gallery_et_search"
-        app:layout_constraintRight_toRightOf="@id/gallery_et_search"/>
+        app:layout_constraintRight_toRightOf="@id/gallery_et_search" />
 </androidx.constraintlayout.widget.ConstraintLayout>
