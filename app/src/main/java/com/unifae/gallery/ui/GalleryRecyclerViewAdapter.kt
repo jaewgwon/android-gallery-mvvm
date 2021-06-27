@@ -43,15 +43,15 @@ class GalleryRecyclerViewAdapter(private val context: Context, private val photo
             Glide.with(itemView)
                 .load(Uri.parse(photo.thumbnailPath))
                 .listener(object: RequestListener<Drawable> {
-                    val progressBar =
-                        itemView.findViewById<ProgressBar>(R.id.item_pb_loading)
                     override fun onLoadFailed(
                         e: GlideException?,
                         model: Any?,
                         target: Target<Drawable>?,
                         isFirstResource: Boolean
                     ): Boolean {
-                        progressBar.visibility = View.GONE
+                        itemView
+                            .findViewById<ProgressBar>(R.id.item_pb_loading)
+                            .visibility = View.GONE
                         return false
                     }
 
@@ -62,7 +62,9 @@ class GalleryRecyclerViewAdapter(private val context: Context, private val photo
                         dataSource: DataSource?,
                         isFirstResource: Boolean
                     ): Boolean {
-                        progressBar.visibility = View.GONE
+                        itemView
+                            .findViewById<ProgressBar>(R.id.item_pb_loading)
+                            .visibility = View.GONE
                         return false
                     }
                 })
