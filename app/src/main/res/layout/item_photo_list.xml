@@ -12,6 +12,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:contentDescription="@string/photo" />
+    <ProgressBar
+        android:id="@+id/item_pb_loading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintLeft_toLeftOf="@id/item_iv_thumbnail"
+        app:layout_constraintTop_toTopOf="@id/item_iv_thumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/item_iv_thumbnail"
+        app:layout_constraintRight_toRightOf="@id/item_iv_thumbnail"/>
     <TextView
         android:id="@+id/item_tv_photographer"
         android:layout_width="wrap_content"
