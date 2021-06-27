@@ -36,7 +36,7 @@ class PhotoDetailActivity: AppCompatActivity() {
             layout.photoTvPhotographerUrl.text = photographerUrl
             Glide.with(layout.root)
                 .load(Uri.parse(url))
-                .fitCenter()
+                .centerCrop()
                 .listener(object: RequestListener<Drawable> {
                     override fun onLoadFailed(
                         e: GlideException?,
@@ -60,7 +60,7 @@ class PhotoDetailActivity: AppCompatActivity() {
                     }
                 })
                 .into(layout.photoIvImage)
-        } else Log.e("PhotoDetailActivity", "No bundles")
+        } else Log.e("PhotoDetailActivity", "No extras")
         setContentView(layout.root)
     }
     override fun onResume() {

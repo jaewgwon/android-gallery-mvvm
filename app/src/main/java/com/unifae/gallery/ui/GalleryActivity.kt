@@ -1,7 +1,6 @@
 package com.unifae.gallery.ui
 
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import android.view.inputmethod.InputMethodManager
 import androidx.activity.viewModels
@@ -45,10 +44,7 @@ class GalleryActivity : AppCompatActivity() {
                     this, cachedPhotos)
             }
         )
-    }
 
-    override fun onResume() {
-        super.onResume()
         // button event handler
         layout.galleryBtnSearch.setOnClickListener { onSearchButtonClicked(it) }
 
@@ -64,7 +60,7 @@ class GalleryActivity : AppCompatActivity() {
                     val sizeOfItems = recyclerView.adapter!!.itemCount - 1
                     if (lastViewableItemPosition == sizeOfItems && viewModel.isNextPage()) { // is the scroll at the end?
                         ++ scrollCnt
-                        if (scrollCnt == 2) {
+                        if (scrollCnt >= 2) {
                             viewModel.fetchNextPage()
                             scrollCnt = 0
                         }

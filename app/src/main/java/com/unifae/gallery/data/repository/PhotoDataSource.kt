@@ -35,8 +35,8 @@ class PhotoDataSource(private val api: PexelsAPI) {
                         search.await().photos.map {
                             Photo(
                                 it.id,
-                                it.src.original,
                                 it.src.portrait,
+                                it.src.tiny,
                                 it.photographer,
                                 it.photographerUrl
                             )

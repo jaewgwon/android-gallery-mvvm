@@ -1,7 +1,6 @@
 package com.unifae.gallery.ui
 
 import android.net.Uri
-import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
@@ -48,9 +47,5 @@ class GalleryViewModel(api: PexelsAPI): ViewModel()  {
 
     fun getDataSourcePhotos(): LiveData<PagedPhotos> {
         return dataSource.searchResponse
-    }
-
-    override fun onCleared() {
-        super.onCleared()
     }
 }
