@@ -17,6 +17,7 @@ class GalleryActivity : AppCompatActivity() {
     private var currentStatus: NetworkStatus = NetworkStatus.LOADING_COMPLETE
     private var lastViewableItemPosition: Int = 0
     private val cachedPhotos: MutableList<Photo> = ArrayList()
+    private var previousQuery: String = ""
 
     private val viewModel: GalleryViewModel by viewModels {
         GalleryViewModelFactory(PexelsClient.getClient())
@@ -75,9 +76,13 @@ class GalleryActivity : AppCompatActivity() {
 
     private fun onSearchButtonClicked(view: View) {
         hideKeyboard(view)
-        if (currentStatus != NetworkStatus.LOADING) {
+        if (
+                currentStatus != NetworkStatus.LOADING
+                && layout.galleryEtSearch.text.toString() != previousQuery
+        ) {
             cachedPhotos.clear()
             lastViewableItemPosition = 0
+            previousQuery = layout.galleryEtSearch.text.toString()
             viewModel.searchPhotos(layout.galleryEtSearch.text.toString())
         }
     }

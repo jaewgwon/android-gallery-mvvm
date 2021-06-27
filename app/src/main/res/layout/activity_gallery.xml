@@ -52,6 +52,7 @@
         android:layout_height="match_parent"
         android:visibility="gone"
         android:background="#B3000000"
+        android:clickable="true"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
