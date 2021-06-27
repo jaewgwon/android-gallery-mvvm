@@ -29,4 +29,13 @@
         app:layout_constraintBottom_toBottomOf="parent"
         android:layout_marginStart="@dimen/margin"
         android:text="@string/photographer"/>
+    <View
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/item_iv_thumbnail"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginLeft="@dimen/margin_small"
+        android:layout_marginRight="@dimen/margin_small"
+        android:background="@color/stroke"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -62,7 +62,10 @@ class PhotoDetailActivity: AppCompatActivity() {
                 .into(layout.photoIvImage)
         } else Log.e("PhotoDetailActivity", "No extras")
         setContentView(layout.root)
+
+        layout.photoBtnBack.setOnClickListener { onBackPressed() }
     }
+
     override fun onResume() {
         super.onResume()
 
