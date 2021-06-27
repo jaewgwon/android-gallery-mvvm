@@ -10,7 +10,7 @@ const val PEXELS_API_KEY = "563492ad6f917000010000019d7e610073fc4666b4aad9663213
 const val BASE_URL = "https://api.pexels.com/v1/"
 
 object PexelsClient {
-    fun get(): PexelsAPI {
+    fun getClient(): PexelsAPI {
         val requestInterceptor = Interceptor {
             val url = it.request()
                 .url()
