@@ -1,11 +1,12 @@
-package com.unifae.gallery
+package com.unifae.gallery.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.unifae.gallery.R
 
-class MainActivity : AppCompatActivity() {
+class GalleryActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_gallery)
     }
 }
