@@ -7,7 +7,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 const val PEXELS_API_KEY = "563492ad6f917000010000019d7e610073fc4666b4aad96632132feb"
-const val BASE_URL = "https://api.pexels.com/v1/"
+const val BASE_URL = "https://api.themoviedb.org/4/"
 
 object PexelsClient {
     fun getClient(): PexelsAPI {
