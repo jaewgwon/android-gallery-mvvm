@@ -30,8 +30,8 @@
             app:layout_constraintRight_toRightOf="parent"
             app:layout_constraintTop_toTopOf="@id/gallery_et_search"
             app:layout_constraintBottom_toBottomOf="@id/gallery_et_search"
-            android:background="@color/white"
-            android:layout_marginEnd="@dimen/margin"
+            android:padding="@dimen/margin_small"
+            android:background="@drawable/btn_oval_ripple_anim"
             android:contentDescription="@string/search"
             android:src="@drawable/ic_baseline_search_24"/>
         <androidx.recyclerview.widget.RecyclerView

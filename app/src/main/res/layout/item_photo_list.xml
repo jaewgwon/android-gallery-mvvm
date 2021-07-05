@@ -3,7 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_marginBottom="@dimen/margin">
+    android:background="@drawable/btn_white_ripple_anim"
+    android:paddingLeft="@dimen/margin"
+    android:paddingRight="@dimen/margin">
     <ImageView
         android:id="@+id/item_iv_thumbnail"
         android:layout_width="@dimen/thumbnail_size"
@@ -34,8 +36,6 @@
         app:layout_constraintTop_toBottomOf="@id/item_iv_thumbnail"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="@dimen/margin_small"
-        android:layout_marginLeft="@dimen/margin_small"
-        android:layout_marginRight="@dimen/margin_small"
+        android:layout_marginTop="@dimen/margin_big"
         android:background="@color/stroke"/>
 </androidx.constraintlayout.widget.ConstraintLayout>

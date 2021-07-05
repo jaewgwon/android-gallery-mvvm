@@ -3,14 +3,15 @@ package com.unifae.gallery.data.repository
 import android.util.Log
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
-import com.unifae.gallery.data.api.PexelsAPI
+import com.unifae.gallery.data.api.di.PexelsApi
 import com.unifae.gallery.data.api.dto.PagedPhotos
 import com.unifae.gallery.data.entity.Photo
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.async
 import kotlinx.coroutines.withContext
+import javax.inject.Inject
 
-class PhotoDataSource(private val api: PexelsAPI) {
+class PhotoDataSource @Inject constructor(private val api: PexelsApi) {
 
     private val _networkStatus = MutableLiveData<NetworkStatus>()
     val networkStatus: LiveData<NetworkStatus>
